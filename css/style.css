@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+
+body {
+  color: #24292e;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%; /* スマホサイズでも画像が縮小される。 */
+}
+
+li {
+  list-style: none;
+}
+
+/* wrapperは共通 */
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto 130px auto;
+  font-size: 0.9rem; /* root em 最上位階層のHTML要素であるHTMLの文字サイズを基準とした相対値。HTMLの文字サイズを変更することで全体の文字サイズも変更できる */
+  padding: 0 4%;
+}
+
+.site-title {
+  line-height: 1px;
+}
+
+.site-title a {
+  display: block;
+}
+
+.sec-title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+/*----------------------------------------------
+ヘッダー
+------------------------------------------------*/
+#header {
+  max-width: 960px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 170px;
+  margin: 0 4%;
+}
+
+#header ul {
+  display: flex;
+  padding: 10px 0;
+}
+
+#header li {
+  font-size: 0.9rem;
+  margin-left: 30px;
+}
+
+header li a {
+  color: #24292e;
+  transition: all 0.3s;
+}
+
+#header li a:hover {
+  opacity: 0.5;
+}
+
+#header li img.icon {
+  width: 20px;
+}
+
+/*-------------------------------------------
+Mainvisual
+-------------------------------------------*/
+#mainvisual {
+  margin-bottom: 80px;
+}
+
+#mainvisual img {
+  width: 100%;
+  max-width: 1920px;
+  height: 420px;
+  object-fit: cover;
+}
+
+/*-------------------------------------------
+About
+-------------------------------------------*/
+#about ul {
+  margin-bottom: 30px;
+}
+
+#about ul li:first-child {
+  margin-bottom: 30px;
+}
+
+#about p {
+  text-align: justify;
+}
+
+/*----------------------------------------------
+SP
+------------------------------------------------*/
+/* pcファースト　大きいサイズから小さいサイズへ */
+/* 600pxより小さいときのcss適用 */
+@media screen and (max-width: 600px) {
+  .wrapper {
+    margin-bottom: 70px;
+  }
+
+  .site-title {
+    margin-top: 20px;
+  }
+
+  .sec-title {
+    margin-bottom: 40px;
+  }
+
+  /* ヘッダー */
+  #header {
+    max-width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  #header li {
+    font-size: 0.8rem;
+    margin-left: 20px;
+  }
+
+  #header li:first-child {
+    margin-left: 0;
+  }
+}
