@@ -1,15 +1,29 @@
 @charset "UTF-8";
+/*====================
+スマホを基本設計にする
+ - 〜479px：スマートフォン縦
+ - 480px〜599px：スマートフォン横
+ - 600px〜959px：タブレット
+ - 960px〜1279px：小型PC
+ - 1280px〜：大型PC
+====================*/
 
 html {
   font-size: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
   color: #24292e;
+  font-family: "Sawarabi Gothic";
 }
 
 a {
   text-decoration: none;
+}
+
+p {
+  font-size: 1.3rem;
 }
 
 img {
@@ -18,6 +32,7 @@ img {
 
 li {
   list-style: none;
+  font-size: 1.2rem;
 }
 
 /* wrapperは共通 */
@@ -30,10 +45,13 @@ li {
 
 .site-title {
   line-height: 1px;
+  font-weight: 600;
+  font-size: 2.4rem;
 }
 
 .site-title a {
   display: block;
+  color: #24292e;
 }
 
 .sec-title {
@@ -51,12 +69,14 @@ li {
   align-items: center;
   justify-content: space-between;
   height: 170px;
-  margin: 0 4%;
+  margin: 0 auto;
+  padding: 0 4%;
 }
 
 #header ul {
   display: flex;
   padding: 10px 0;
+  align-items: center;
 }
 
 #header li {
@@ -74,7 +94,7 @@ header li a {
 }
 
 #header li img.icon {
-  width: 20px;
+  width: 30px;
 }
 
 /*-------------------------------------------
@@ -87,7 +107,7 @@ Mainvisual
 #mainvisual img {
   width: 100%;
   max-width: 1920px;
-  height: 420px;
+  height: 400px;
   object-fit: cover;
 }
 
@@ -96,6 +116,10 @@ About
 -------------------------------------------*/
 #about ul {
   margin-bottom: 30px;
+}
+
+#about ul li {
+  margin-bottom: 3px;
 }
 
 #about ul li:first-child {
@@ -121,6 +145,18 @@ Works
   margin-bottom: 23px;
 }
 
+#works ul li img {
+  cursor: pointer;
+  width: 640px;
+  max-height: 417px;
+  transition: all 0.3s;
+}
+
+#works ul li img:hover {
+  transform: scale(1.2, 1.2);
+  opacity: 0.7;
+}
+
 /*-------------------------------------------
 News
 -------------------------------------------*/
@@ -143,6 +179,57 @@ News
   padding: 15px;
 }
 
+/*-------------------------------------------
+Contact
+-------------------------------------------*/
+#contact p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#contact dl {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+#contact dt {
+  width: 15%;
+}
+
+#contact dd {
+  width: 85%;
+  margin-bottom: 10px;
+}
+
+#contact dd input,
+#contact dd textarea {
+  width: 100%;
+  border: solid 1px #c8c8c8;
+  padding: 10px;
+}
+
+#contact dd textarea {
+  height: 10rem;
+}
+
+#contact .button {
+  text-align: center;
+}
+
+#contact .button input {
+  border: solid 1px #24292e;
+  width: 200px;
+  background-color: #24292e;
+  color: #fff;
+  padding: 15px 0;
+  transition: all 0.3s;
+}
+
+#contact .button input:hover {
+  background: #fff;
+  color: #24292e;
+}
 /*----------------------------------------------
 SP
 ------------------------------------------------*/
@@ -166,6 +253,8 @@ SP
     max-width: 100%;
     height: auto;
     flex-direction: column;
+    margin-top: 20px;
+    line-height: 40px;
   }
 
   #header li {
@@ -175,6 +264,11 @@ SP
 
   #header li:first-child {
     margin-left: 0;
+  }
+
+  #header li img.icon {
+    width: 20px;
+    margin-top: 15px;
   }
 
   /* works */
@@ -200,5 +294,18 @@ SP
   #news dd {
     width: 100%;
     padding-top: 0;
+  }
+
+  /* contact */
+  #contact dl {
+    flex-direction: column;
+  }
+
+  #contact dt {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  #contact dd {
+    width: 100%;
   }
 }

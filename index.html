@@ -10,13 +10,14 @@
     <link rel="shortcut icon" href="img/favicon.ico" />
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet">
   </head>
   <body>
     <!-- ヘッダー -->
     <header id="header">
       <h1 class="site-title">
-        <a href="/index.html">
-          <img src="./img/logo.svg" alt="My Work">
+        <a href="#">
+         ShinCode
         </a>
       </h1>
       <nav>
@@ -25,8 +26,8 @@
           <li><a href="#works">Works</a></li>
           <li><a href="#news">News</a></li>
           <li><a href="#contact">Contact</a></li>
-        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-          <img src="./img/icon-instagram.png" alt="instagram" class="icon">
+        <li><a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">
+          <img src="./img/twitter.png" alt="instagram" class="icon">
         </a></li>
         </ul>
       </nav>
@@ -36,8 +37,8 @@
       <!-- メインビジュアル -->
       <div id="mainvisual">
         <picture>
-          <source media="(max-width: 600px)" srcset="./img/mainvisual-sp.jpg">
-          <img src="img/mainvisual-pc.jpg" alt="テキストテキストテキスト">
+          <source media="(max-width: 600px)" srcset="./img/main-sp.jpg">
+          <img src="img/main-pc.jpg" alt="テキストテキストテキスト">
         </picture>
       </div>
 
@@ -45,13 +46,14 @@
       <section id="about" class="wrapper">
         <h2 class="sec-title">About</h2>
         <ul>
-          <li>ShinCode</li>
-          <li>Programming Youtube Company</li>
-          <li>TEL:xxx-xxx-xxx</li>
-          <li>URL:youtube.com</li>
+          <li>ShinCode株式会社</li>
+          <li>Web制作会社として設立
+          </li>
+          <li>Webサイト・アプリ開発を承ります</li>
+          <li>メールアドレス：xxxxxxx@xxx.com</li>
         </ul>
         <p>
-          ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+          Webサイト制作やアプリ開発を得意としています。また、Web講師としても活動しており新人の育成をしたい企業も申し込み承ります。
         </p>
       </section>
       <!-- Works -->
@@ -64,6 +66,9 @@
           <li><img src="./img/works4.jpg" alt="work4"></li>
           <li><img src="./img/works5.jpg" alt="work5"></li>
           <li><img src="./img/works6.jpg" alt="work6"></li>
+          <li><img src="./img/works2.jpg" alt="work1"></li>
+          <li><img src="./img/works4.jpg" alt="work2"></li>
+          <li><img src="./img/works1.jpg" alt="work3"></li>
         </ul>
       </section>
       <!-- News -->
@@ -83,7 +88,22 @@
         </dl>
       </section>
       <!-- Contact -->
-      <section id="contact" class="wrapper"></section>
+      <section id="contact" class="wrapper">
+        <h2 class="sec-title">Contact</h2>
+        <p>お問い合わせは以下のフォームから
+        </p>
+        <form action="#" method="post">
+          <dl>
+            <dt><label for="name">お名前</label></dt>
+            <dd><input type="text" id="name"></dd>
+            <dt><label for="email">メールアドレス</label></dt>
+            <dd><input type="email" id="email"></dd>
+            <dt><label for="name">内容</label></dt>
+            <dd><textarea id="content" cols="30" rows="10"></textarea></dd>
+          </dl>
+          <div class="button"><input type="submit" value="送信"></div>
+        </form>
+      </section>
 
       <!-- Footer -->
       <footer id="footer"></footer>
